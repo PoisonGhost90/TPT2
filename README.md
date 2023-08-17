@@ -6,7 +6,7 @@
 
 # Region/Diff Unlocking/Pushing
 #### AI script for tower testing goal navigation in any game stage
-- [Import Here]
+- [Import Here](#import-code)
 - [Instructions Here](#instructions)
 - Navigates the tower testing menu for all regions and difficulties
   - Sorted by enemy health at wave 1e9
