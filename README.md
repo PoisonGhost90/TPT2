@@ -38,6 +38,7 @@
 
 
 ## Instructions
+0. *Ensure the `AI Overlay` is active, defaulted to the `F4` key*
 1. Open the tower testing menu
 2. Select the forest region
 3. Press `x` to start the script
