@@ -43,7 +43,7 @@
 #get.highscore.era(str, idx) (highscore.era({region.diff.pair({str}, {idx})}))
 #get.highscore.inf(str, idx) (highscore.infinity({region.diff.pair({str}, {idx})}))
 #get.highscore(str, idx, s) (if({s} == 0, {get.highscore.wave({str}, {idx})}, if({s} == 1, {get.highscore.era({str}, {idx})}, {get.highscore.inf({str}, {idx})})))
-#get.goal(s) (if({s} == 0, 100.0, if({s} == 1, 1.0, i2d(a.i(2, "pow", ({s} - 2))))))
+#get.goal(s) (if({s} == 0, 100.0, if({s} == 1, 1.0, i2d(a.i(10, "pow", ({s} - 2))))))
 #get.current(s) (if({s} == 0, wave(), if({s} == 1, era(), infinity())))
 
 #diff.click ({diff.easy} + {scale.vec({diff.next}, i2d({get.diff({offsets}, idx)} % 6))})
