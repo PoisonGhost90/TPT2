@@ -1,0 +1,30 @@
+;#launch (vec(222.0, 567.0))
+#launch (vec(211.0, 632.0))
+;#normal (vec(605.0, 923.0))
+#normal (vec(610.0, 988.0))
+;#endless (vec(981.0, 923.0))
+#endless (vec(979.0, 988.0))
+
+;#diff.easy (vec(506.0, 813.0))
+#diff.easy (vec(506.0, 875.0))
+;#diff.next (vec(0.0, (746.0 - 792.0)))
+#diff.next (vec(0.0, (809.0 - 855.0)))
+
+;#region.next (vec(374.0, 700.0))
+#region.next (vec(374.0, 762.0))
+;#region.prev (vec(57.0, 700.0))
+#region.prev (vec(57.0, 762.0))
+
+:global int stage
+stage = 0
+
+gvs("<size=0%>launch", {launch})
+gvs("<size=0%>normal", {normal})
+gvs("<size=0%>endless", {endless})
+gvs("<size=0%>diff.easy", {diff.easy})
+gvs("<size=0%>diff.next", {diff.next})
+gvs("<size=0%>region.next", {region.next})
+gvs("<size=0%>region.prev", {region.prev})
+
+end:
+wait(0.0)
