@@ -18,13 +18,29 @@
 :global int stage
 stage = 0
 
-gvs("<size=0%>launch", {launch})
-gvs("<size=0%>normal", {normal})
-gvs("<size=0%>endless", {endless})
-gvs("<size=0%>diff.easy", {diff.easy})
-gvs("<size=0%>diff.next", {diff.next})
-gvs("<size=0%>region.next", {region.next})
-gvs("<size=0%>region.prev", {region.prev})
+:local vector launch
+:local vector normal
+:local vector endless
+:local vector diff.easy
+:local vector diff.next
+:local vector region.next
+:local vector region.prev
+
+launch = {launch}
+normal = {normal}
+endless = {endless}
+diff.easy = {diff.easy}
+diff.next = {diff.next}
+region.next = {region.next}
+region.prev = {region.prev}
+
+gvs("<size=0%>launch", launch)
+gvs("<size=0%>normal", normal)
+gvs("<size=0%>endless", endless)
+gvs("<size=0%>diff.easy", diff.easy)
+gvs("<size=0%>diff.next", diff.next)
+gvs("<size=0%>region.next", region.next)
+gvs("<size=0%>region.prev", region.prev)
 
 end:
 wait(0.0)
