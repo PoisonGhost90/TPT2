@@ -1,91 +1,91 @@
-Forest.Easy,              
-Desert.Easy,              
-Winter.Easy,              
-Forest.Medium,            
-Desert.Medium,            
-Winter.Medium,            
-Underground.Easy,         
-Underground.Medium,       
-Forest.Hard,              
-Volcano.Easy,             
-Volcano.Medium,           
-Desert.Hard,              
-Winter.Hard,              
-Underground.Hard,         
-High Mountain.Easy,       
-Volcano.Hard,             
-High Mountain.Medium,     
-Forest.Insane,            
-High Mountain.Hard,       
-Desert.Insane,            
-Winter.Insane,            
-Jungle.Easy,              
-Underground.Insane,       
-Jungle.Medium,            
-Volcano.Insane,           
-Metallic Ruins.Easy,      
-Metallic Ruins.Medium,    
-High Mountain.Insane,     
-Jungle.Hard,              
-Beach.Easy,               
-Metallic Ruins.Hard,      
-Beach.Medium,             
-Ocean.Easy,               
-Forest.Nightmare,         
-Jungle.Insane,            
-Ocean.Medium,             
-Beach.Hard,               
-Neutral.Easy,             
-Metallic Ruins.Insane,    
-Desert.Nightmare,         
-Winter.Nightmare,         
-Neutral.Medium,           
-Underground.Nightmare,    
-Ocean.Hard,               
-Dark Realm.Easy,          
-Volcano.Nightmare,        
-Beach.Insane,             
-Dark Realm.Medium,        
-High Mountain.Nightmare,  
-Neutral.Hard,             
-Heaven.Easy,              
-Heaven.Medium,            
-Ocean.Insane,             
-Jungle.Nightmare,         
-Dark Realm.Hard,          
-Metallic Ruins.Nightmare, 
-Universe.Easy,            
-Neutral.Insane,           
-Heaven.Hard,              
-Universe.Medium,          
-Beach.Nightmare,          
-Dark Realm.Insane,        
-Universe.Hard,            
-Ocean.Nightmare,          
-Heaven.Insane,            
-Chaos.Easy,               
-Chaos.Medium,             
-Forest.Impossible,        
-Neutral.Nightmare,        
-Universe.Insane,          
-Dark Realm.Nightmare,     
-Desert.Impossible,        
-Winter.Impossible,        
-Underground.Impossible,   
-Chaos.Hard,               
-Heaven.Nightmare,         
-Volcano.Impossible,       
-High Mountain.Impossible, 
-Jungle.Impossible,        
-Metallic Ruins.Impossible,
-Chaos.Insane,             
-Universe.Nightmare,       
-Beach.Impossible,         
-Ocean.Impossible,         
-Neutral.Impossible,       
-Dark Realm.Impossible,    
-Chaos.Nightmare,          
-Heaven.Impossible,        
-Universe.Impossible,      
-Chaos.Impossible,         
-Forest.Easy,              
+Forest,Easy,1.000E+09,2.639E+17
+Desert,Easy,1.000E+09,1.593E+18
+Winter,Easy,1.000E+09,1.593E+18
+Underground,Easy,1.000E+09,1.700E+18
+Volcano,Easy,1.000E+09,7.190E+18
+High Mountain,Easy,1.000E+09,1.131E+19
+Jungle,Easy,1.000E+09,2.053E+19
+Metallic Ruins,Easy,1.000E+09,2.534E+19
+Beach,Easy,1.000E+09,4.549E+19
+Ocean,Easy,1.000E+09,1.007E+20
+Forest,Medium,1.000E+09,1.300E+20
+Neutral,Easy,1.000E+09,2.163E+20
+Desert,Medium,1.000E+09,9.390E+20
+Winter,Medium,1.000E+09,9.390E+20
+Underground,Medium,1.000E+09,1.010E+21
+Dark Realm,Easy,1.000E+09,1.739E+21
+Volcano,Medium,1.000E+09,5.080E+21
+High Mountain,Medium,1.000E+09,8.605E+21
+Jungle,Medium,1.000E+09,1.713E+22
+Heaven,Easy,1.000E+09,2.151E+22
+Metallic Ruins,Medium,1.000E+09,2.156E+22
+Beach,Medium,1.000E+09,3.919E+22
+Ocean,Medium,1.000E+09,7.582E+22
+Neutral,Medium,1.000E+09,1.034E+23
+Dark Realm,Medium,1.000E+09,4.379E+23
+Heaven,Medium,1.000E+09,2.878E+24
+Universe,Easy,1.000E+09,7.881E+24
+Forest,Hard,1.000E+09,7.930E+24
+Desert,Hard,1.000E+09,9.830E+25
+Winter,Hard,1.000E+09,9.830E+25
+Underground,Hard,1.000E+09,1.090E+26
+Volcano,Hard,1.000E+09,9.086E+26
+Universe,Medium,1.000E+09,1.462E+27
+High Mountain,Hard,1.000E+09,1.916E+27
+Jungle,Hard,1.000E+09,5.078E+27
+Metallic Ruins,Hard,1.000E+09,7.028E+27
+Beach,Hard,1.000E+09,1.631E+28
+Ocean,Hard,1.000E+09,4.080E+28
+Neutral,Hard,1.000E+09,5.977E+28
+Dark Realm,Hard,1.000E+09,3.748E+29
+Heaven,Hard,1.000E+09,2.860E+30
+Chaos,Easy,1.000E+09,3.330E+30
+Forest,Insane,1.000E+09,2.760E+32
+Chaos,Medium,1.000E+09,3.093E+33
+Universe,Hard,1.000E+09,6.892E+33
+Desert,Insane,1.000E+09,8.053E+33
+Winter,Insane,1.000E+09,8.053E+33
+Underground,Insane,1.000E+09,9.357E+33
+Volcano,Insane,1.000E+09,1.753E+35
+High Mountain,Insane,1.000E+09,5.248E+35
+Jungle,Insane,1.000E+09,2.201E+36
+Metallic Ruins,Insane,1.000E+09,3.549E+36
+Beach,Insane,1.000E+09,1.223E+37
+Ocean,Insane,1.000E+09,4.689E+37
+Neutral,Insane,1.000E+09,8.111E+37
+Dark Realm,Insane,1.000E+09,1.143E+39
+Heaven,Insane,1.000E+09,1.803E+40
+Chaos,Hard,1.000E+09,1.697E+42
+Universe,Insane,1.000E+09,7.965E+44
+Forest,Nightmare,1.000E+09,6.080E+45
+Desert,Nightmare,1.000E+09,8.874E+47
+Winter,Nightmare,1.000E+09,8.874E+47
+Underground,Nightmare,1.000E+09,1.128E+48
+Volcano,Nightmare,1.000E+09,9.612E+49
+High Mountain,Nightmare,1.000E+09,5.558E+50
+Jungle,Nightmare,1.000E+09,5.509E+51
+Metallic Ruins,Nightmare,1.000E+09,1.183E+52
+Beach,Nightmare,1.000E+09,8.561E+52
+Ocean,Nightmare,1.000E+09,7.352E+53
+Neutral,Nightmare,1.000E+09,1.764E+54
+Dark Realm,Nightmare,1.000E+09,1.209E+56
+Chaos,Insane,1.000E+09,2.813E+56
+Heaven,Nightmare,1.000E+09,9.691E+57
+Universe,Nightmare,1.000E+09,1.982E+65
+Forest,Impossible,1.000E+09,3.200E+79
+Chaos,Nightmare,1.000E+09,2.500E+83
+Desert,Impossible,1.000E+09,3.418E+83
+Winter,Impossible,1.000E+09,3.418E+83
+Underground,Impossible,1.000E+09,5.524E+83
+Volcano,Impossible,1.000E+09,2.673E+87
+High Mountain,Impossible,1.000E+09,8.938E+88
+Jungle,Impossible,1.000E+09,8.780E+90
+Metallic Ruins,Impossible,1.000E+09,4.051E+91
+Beach,Impossible,1.000E+09,2.121E+93
+Ocean,Impossible,1.000E+09,1.564E+95
+Neutral,Impossible,1.000E+09,9.003E+95
+Dark Realm,Impossible,1.000E+09,4.222E+99
+Heaven,Impossible,1.000E+09,2.707E+103
+Universe,Impossible,1.000E+09,8.395E+117
+Chaos,Impossible,1.000E+09,9.598E+153
+Forest,Easy,1.000E+09,2.639E+17
