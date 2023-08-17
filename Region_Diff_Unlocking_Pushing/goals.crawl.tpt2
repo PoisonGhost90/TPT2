@@ -1,0 +1,129 @@
+#x.screen.scale (min(width.d() , ((16 / 9) * height.d())))
+#y.screen.scale (min(height.d(), ((9 / 16) * width.d() )))
+#x.displacement (x({pos}) - x({anchor}))
+#y.displacement (y({pos}) - y({anchor}))
+#x.origin (width.d()  * x({anchor}))
+#y.origin (height.d() * y({anchor}))
+#click.relative.x ({x.screen.scale} * ui_size * {x.displacement} + {x.origin})
+#click.relative.y ({y.screen.scale} * ui_size * {y.displacement} + {y.origin})
+#click.relative(pos, anchor) ({click.relative.x}, {click.relative.y})
+
+#launch (gvg("<size=0%>launch"))
+#normal (gvg("<size=0%>normal"))
+#endless (gvg("<size=0%>endless"))
+#diff.easy (gvg("<size=0%>diff.easy"))
+#diff.next (gvg("<size=0%>diff.next"))
+#region.next (gvg("<size=0%>region.next"))
+#region.prev (gvg("<size=0%>region.prev"))
+
+#scale.vec(v, d) ({v} * (vec({d}, {d})))
+
+#offsets   ("0000+100+100-201+101+101+1000001-302+4000001-302+102+102+200-102+101-503+502-403+103+400-303+301-203+3000001-203+102+200-102+101+100+604+603+301-102+200-303-604+104-701-704+602+200-704+403+301-604+502+2000001-303-304+502-404+600-303+202+101-504+303+202-404+303+2000001+105-504+303-204+505+105+105-402-204+705+105+105+105+703-104-505+105+105+105+304-205+105+105+100")
+#absolutes ("0000010002000001010102010300030100020400040101020202030205000402050100030502010302030600030306010403070007010503060208000702080109000004060309010802100007030104020410010304090211000404080311010504100212001201090306041102070413001003120213010804110313020904120314001401000510041303110401050205030514021204040505050605070514031304080509051005110514041205130514050000")
+
+#get.region(str, idx) (s2i(sub({str}, {idx}, 2), 0))
+#get.diff(str, idx) (s2i(sub({str}, {idx} + 2, 2), 0))
+
+#generate.dot.string(x) (if({x}==0,".",if({x}==1,"..",if({x}==2,"...",if({x}==3,"....",if({x}==4,".....",if({x}==5,"......",if({x}==6,".......",if({x}==7,"........",if({x}==8,".........",if({x}==9,"..........",if({x}==10,"...........",if({x}==11,"............",if({x}==12,".............",if({x}==13,"..............",if({x}==14,"...............",if({x}==15,"................","")))))))))))))))))
+#get.offset(str, x) (index({str}, {generate.dot.string({x})}, 0))
+#get.length(str, x) ({get.offset({str}, {x} + 1)} - ({get.offset({str}, {x})} + ({x} + 1)))
+#get.word(str, x) (sub({str}, ({get.offset({str}, {x})} + ({x} + 1)), {get.length({str}, {x})}))
+
+#regions (".forest..desert...winter....underground.....volcano......highmountain.......jungle........metallicruins.........beach..........ocean...........neutral............darkrealm.............heaven..............universe...............chaos................")
+#diffs (".easy..medium...hard....insane.....nightmare......impossible.......")
+#convert.region(r) ({get.word({regions}, {r})})
+#convert.diff(d) ({get.word({diffs}, {d})})
+
+#get.region.str(str, idx) ({convert.region({get.region({str}, {idx})})})
+#get.diff.str(str, idx) ({convert.diff({get.diff({str}, {idx})})})
+
+#region.diff.pair(str, idx) {get.region.str({str}, {idx})}, {get.diff.str({str}, {idx})}
+
+#get.highscore.wave(str, idx) (highscore.wave({region.diff.pair({str}, {idx})}))
+#get.highscore.era(str, idx) (highscore.era({region.diff.pair({str}, {idx})}))
+#get.highscore.inf(str, idx) (highscore.infinity({region.diff.pair({str}, {idx})}))
+#get.highscore(str, idx, s) (if({s} == 0, {get.highscore.wave({str}, {idx})}, if({s} == 1, {get.highscore.era({str}, {idx})}, {get.highscore.inf({str}, {idx})})))
+#get.goal(s) (if({s} == 0, 100.0, if({s} == 1, 1.0, i2d(a.i(2, "pow", ({s} - 2))))))
+#get.current(s) (if({s} == 0, wave(), if({s} == 1, era(), infinity())))
+
+#diff.click ({diff.easy} + {scale.vec({diff.next}, i2d({get.diff({offsets}, idx)} % 6))})
+
+;10 retries and +1 for death logic
+#retry.count (10 + 1)
+
+#launcher.condition (({get.highscore({absolutes}, idx, stage)} < {get.goal(stage)}) && (retry < {retry.count}))
+
+#num.selection (360)
+#navigate.mod ({num.selection} + 4)
+#next.idx.mod ({navigate.mod} + 4)
+
+
+#deathchk (if(tower.health(false) == 0.0, died, testing))
+#metgoal(s, r) (({get.current({s})} >= {get.goal({s})}) || ({r} >= {retry.count}))
+#testloop(s, r) (if({metgoal({s}, {r})}, exit, {deathchk}))
+#exitchk(s, r) (if(isTowerTesting() == false, end, {testloop({s}, {r})}))
+
+:local int idx
+:global int stage
+:local string stemp
+:local int itemp
+:local int retry
+
+    key.x()
+
+    isopen("towertesting")
+
+start:
+    executesync("goal.crawl.config")
+
+navigate:
+    retry = 0
+    click(if(stage == 0, {normal}, {endless}))
+    
+    itemp = {get.region({offsets}, idx % {navigate.mod})}
+
+navigate.region:
+    click(if(itemp > 0, {region.next}, if(itemp < 0, {region.prev}, {diff.click})))
+    itemp = if(itemp > 0, itemp - 1, if(itemp < 0, itemp + 1, itemp))
+    goto(if(itemp == 0, navigate.diff, navigate.region))
+
+navigate.diff:
+    click({diff.click})
+
+checkscore:
+  ;wait(1.0) ;testing wait to check order of things
+    goto(if({launcher.condition}, launcher, next.idx))
+
+launcher:
+  ;goto(next.idx) ;testing goto to check order of things
+    click({launch})
+    
+died:
+    retry = (retry + 1)
+    restart()
+
+started:
+    goto(if((tower.health(false) == 0.0), started, testing))
+
+testing:
+    goto({exitchk(stage, retry)})
+
+exit:
+    exit()
+    show("towertesting", true)
+    gotoif(exit, isopen("towertesting") == false)
+    
+  ;needed wait time for game to catch up
+    wait(1.0)
+
+next.idx:
+    idx = (idx + 4) % {next.idx.mod}
+    gotoif(navigate, idx != 0)
+
+next.stage:
+  ;idx = 0
+    stage = (stage + 1)
+    gotoif(navigate, stage != 0)
+
+end:
+    wait(0.0)
