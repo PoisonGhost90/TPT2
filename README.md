@@ -66,9 +66,10 @@ EmdvYWxzLmNyYXdsOmNvbmZpZwAAAAAAAAAAEAAAAA5nbG9iYWwuaW50LnNldAhjb25zdGFudAQFc3Rh
       <li><code>2+</code> = infinity wave goal(s) = <code>10 ^ (stage - 2)</code></li>
       <ul>
         <li><code>2</code> = Infinity 1</li>
-        <li><code>3</code> = Infinity 10</summary></li>
-        <li><code>4</code> = Infinity 100</summary></li>
-        <li><code>5</code> = Infinity 1000</summary></li>
+        <li><code>3</code> = Infinity 10</li>
+        <li><code>4</code> = Infinity 100</li>
+        <li>...</li>
+        <li><code>13</code> = Infinity 1e11 (100B)</li>
       </ul>
     </ul>
   </details></li>
