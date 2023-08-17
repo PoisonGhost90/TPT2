@@ -14,6 +14,10 @@
 - Automatically restarts tower testing when tower reaches zero health (dead)
   - Leaves the current region/diff if too many deaths occur
 - Automatically leaves tower testing once goal is reached and moves onto the next region/diff
+- Manually exiting during tower testing will end the script automatically
+  - Exiting at other times will often cause several erroneous clicks, followed by the script becoming stuck
+    - This could be best resolved by entering any region/diff and then leaving to stop the script
+    - Alternatively you could enter the region/diff the script expects to enter and continue from there
 
 #### For any stage of the game:
 <ul>
@@ -85,9 +89,8 @@ EmdvYWxzLmNyYXdsOmNvbmZpZwAAAAAAAAAAEAAAAA5nbG9iYWwuaW50LnNldAhjb25zdGFudAQFc3Rh
   </ul>
 </ul>
 
-### Notes
+### Additional Notes
 #### Behavior
-- This script will navigate and launch each region/diff, waits for the current goal to exit, and then reopens the testing window to go to the next region/diff
 - This script only accounts for the navigation (e.g. no software changes, no active module skill usage)
 - Provided wait times for my system, you may need to shorten/lengthen for your setup
 - Script will end if you manually exit testing
