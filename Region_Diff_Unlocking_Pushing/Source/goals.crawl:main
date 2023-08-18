@@ -74,7 +74,7 @@
     isopen("towertesting")
 
 start:
-    executesync("goal.crawl.config")
+    executesync("goals.crawl:config")
 
 navigate:
     retry = 0
@@ -91,7 +91,7 @@ navigate.diff:
     click({diff.click})
 
 checkscore:
-  ;wait(1.0) ;testing wait to check order of things
+  wait(0.0) ;testing wait to check order of things
     goto(if({launcher.condition}, launcher, next.idx))
 
 launcher:
