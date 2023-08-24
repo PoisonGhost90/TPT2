@@ -58,51 +58,34 @@
 :local int retry
 :local vector diffclick
 
-    key.x()
-
-    isopen("towertesting")
-
-start:
-    executesync("goals.crawl:config")
-
 navigate:
-    retry = 0
-    executesync("goals.crawl:navigate")
+	gotoif(endless, stage != 0)
 
-checkscore:
-  wait(0.0) ;testing wait to check order of things
-    goto(if({launcher.condition}, launcher, next.idx))
+normal:
+    {click.relative({convert.click({normal})})}
+    goto(navigate.init)
 
-launcher:
-  ;goto(next.idx) ;testing goto to check order of things
-    {click.relative({convert.click({launch})})}
-    
-died:
-    retry = (retry + 1)
-    restart()
+endless:
+    {click.relative({convert.click({endless})})}
 
-started:
-    goto(if((tower.health(false) == 0.0), started, testing))
+navigate.init:
+    itemp = {get.region({offsets}, idx % {navigate.mod})}
 
-testing:
-    goto({exitchk(stage, retry)})
+navigate.region:
+	gotoif(navigate.diff, itemp == 0)
+    gotoif(region.prev, itemp < 0)
 
-exit:
-    exit()
-    show("towertesting", true)
-    gotoif(exit, isopen("towertesting") == false)
-    
-  ;needed wait time for game to catch up
-    wait(1.0)
+region.next:
+    {click.relative({convert.click({region.next})})}
+    goto(itemp.next)
 
-next.idx:
-    idx = (idx + 4) % {next.idx.mod}
-    gotoif(navigate, idx != 0)
+region.prev:
+    {click.relative({convert.click({region.prev})})}
 
-next.stage:
-  ;idx = 0
-    stage = (stage + 1)
-    gotoif(navigate, stage != 0)
+itemp.next:
+    itemp = if(itemp > 0, itemp - 1, if(itemp < 0, itemp + 1, itemp))
+    goto(navigate.region)
 
-end:
-    execute("goals.crawl:cleanup")
+navigate.diff:
+	diffclick = {diff.click}
+    {click.relative(x(diffclick), y(diffclick), 0.0, 1.0)}

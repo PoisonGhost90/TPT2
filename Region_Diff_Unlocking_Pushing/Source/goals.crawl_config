@@ -1,19 +1,12 @@
-;#launch (vec(222.0, 567.0))
-#launch (vec(211.0, 632.0))
-;#normal (vec(605.0, 923.0))
-#normal (vec(610.0, 988.0))
-;#endless (vec(981.0, 923.0))
-#endless (vec(979.0, 988.0))
+#launch (vec(402.0, 242.0))
+#region.next (vec(705.0, 488.0))
+#region.prev (vec(105.0, 488.0))
+#diff.easy (vec(951.0/1920.0, 695.0/1080.0))
+#diff.next (vec(0.0, -88.0/1080.0))
 
-;#diff.easy (vec(506.0, 813.0))
-#diff.easy (vec(506.0, 875.0))
-;#diff.next (vec(0.0, (746.0 - 792.0)))
-#diff.next (vec(0.0, (809.0 - 855.0)))
+#normal (vec(933.25, 905.0))
+#endless (vec(1206.75, 905.0))
 
-;#region.next (vec(374.0, 700.0))
-#region.next (vec(374.0, 762.0))
-;#region.prev (vec(57.0, 700.0))
-#region.prev (vec(57.0, 762.0))
 
 :global int stage
 stage = 0
