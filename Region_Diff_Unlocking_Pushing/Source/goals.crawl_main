@@ -48,7 +48,7 @@
 
 
 #deathchk (if(tower.health(false) == 0.0, died, testing))
-#metgoal(s, r) (({get.current({s})} >= {get.goal({s})}) || ({r} >= {retry.count}))
+#metgoal(s, r) ((({get.current({s})} >= {get.goal({s})}) && (if({s} == 0, enemies(), 0) < 1)) || ({r} >= {retry.count}))
 #testloop(s, r) (if({metgoal({s}, {r})}, exit, {deathchk}))
 #exitchk(s, r) (if(isTowerTesting() == false, end, {testloop({s}, {r})}))
 
