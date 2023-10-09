@@ -8,6 +8,7 @@
 #### AI script for tower testing goal navigation in any game stage
 - [Import Here](#import-code)
 - [Instructions Here](#instructions)
+- [FAQ Here](#regiondiff-unlockingpushing-faq)
 - Navigates the tower testing menu for all regions and difficulties
   - Sorted by enemy health at wave 1e9
 - Automatically launches each region/diff that's under the current targeted goal
@@ -103,3 +104,8 @@ E2dvYWxzLmNyYXdsOmNsZWFudXAAAAAAAAAAAAgAAAAMZ2xvYmFsLnVuc2V0CGNvbnN0YW50BBo8c2l6
 #### Additional Information
 - A Tower Restart Script may be helpful, I have one located here: [FSS's Discord Forum Post](https://discord.com/channels/488444879836413975/1136751561473798176/1136752917366439957)
 - Made with [d0sboot's editor](https://d0sboots.github.io/perfect-tower/)
+
+### Region/Diff Unlocking/Pushing FAQ
+
+<details><summary>When I press <code>x</code> it immediately opens the help screen?</summary>
+    There's an issue with the navigation clicks, check you have dynamic ui off and have restarted the overlay <code>F4</code>. It could also help to make sure you have the latest import.
