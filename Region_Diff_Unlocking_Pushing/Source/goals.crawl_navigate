@@ -1,10 +1,10 @@
-#launch (gvg("<size=0%>launch"))
-#normal (gvg("<size=0%>normal"))
-#endless (gvg("<size=0%>endless"))
-#diff.easy (gvg("<size=0%>diff.easy"))
-#diff.next (gvg("<size=0%>diff.next"))
-#region.next (gvg("<size=0%>region.next"))
-#region.prev (gvg("<size=0%>region.prev"))
+#launch (gvg("<size=0%>launch<size=100%>"))
+#normal (gvg("<size=0%>normal<size=100%>"))
+#endless (gvg("<size=0%>endless<size=100%>"))
+#diff.easy (gvg("<size=0%>diff.easy<size=100%>"))
+#diff.next (gvg("<size=0%>diff.next<size=100%>"))
+#region.next (gvg("<size=0%>region.next<size=100%>"))
+#region.prev (gvg("<size=0%>region.prev<size=100%>"))
 
 #convert.click(V) (x({V})/1920.0),(y({V})/1080.0),((x({V})%3.0)/2.0),((y({V})%3.0)/2.0)
 
